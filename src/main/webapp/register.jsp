@@ -30,7 +30,7 @@
 				<td><input type="password" name="password"></td>
 			</tr>
 		</table>
-		<input type="submit" value="登録" class="btn btn-primary">
+		<input type="submit" value="登録" class="btn btn-success">
 	</form>
 </body>
 </html>

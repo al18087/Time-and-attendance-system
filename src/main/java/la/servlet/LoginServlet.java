@@ -62,7 +62,7 @@ public class LoginServlet extends HttpServlet {
 				// ログインが成功のとき
 				HttpSession session = request.getSession(true);
 				session.setAttribute("login", login);
-				Forward.gotoPage(request, response, "/work.jsp");
+				Forward.gotoPage(request, response, "/WorkServlet");
 			}
 			
 		} catch (DAOException e) {

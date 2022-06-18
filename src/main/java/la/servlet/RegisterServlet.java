@@ -34,7 +34,7 @@ public class RegisterServlet extends HttpServlet {
 				
 				RegisterDAO dao = new RegisterDAO();
 				LoginBean register = dao.saveRegister(loginId, password, name);
-				
+
 				request.setAttribute("register", register);
 				Forward.gotoPage(request, response, "/registerFinish.jsp");
 			}
