@@ -15,9 +15,12 @@
 	<header>
 		<h1 class="display-4">勤怠システム</h1>
 	</header>
-	<br>
-	
+	<hr>
+	<a href="/work/LoginServlet?action=logout" class="text-success"
+		style="font-size: 20px;">ログアウト</a>
+	<hr>
 	<form action="/work/WorkServlet?action=search_calendar" method="post">
+		閲覧したいカレンダーを選択　
 		<select name="year" style="font-size : 20px;">
 			<c:forEach items="${yearList}" var="year">
 				<option value="${year}">${year}
@@ -33,7 +36,7 @@
 		月　
 		<input type="submit" value="検索" class="btn btn-success">
 	</form>
-	<br>
+	<hr>
 	<h2>${year_and_month.year}年　${year_and_month.month}月</h2>
 	<table class="table">
 		<tr>

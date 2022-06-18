@@ -65,6 +65,28 @@ public class LoginServlet extends HttpServlet {
 				Forward.gotoPage(request, response, "/WorkServlet");
 			}
 			
+			// ログアウト
+			else if (action.equals("logout")) {
+				HttpSession session = request.getSession(false);
+				
+				// 元々ログインしていないとき
+				if (session == null) {
+					request.setAttribute("message", "ログインしていません。");
+					Forward.gotoPage(request, response, "/errInternal.jsp");
+				}
+				
+				// ログインしているとき
+				else {
+					session.removeAttribute("calendar");
+					session.removeAttribute("year_and_month");
+					session.removeAttribute("yearList");
+					session.removeAttribute("monthList");
+					session.invalidate();
+					request.setAttribute("message", "ログアウトしました。");
+					Forward.gotoPage(request, response, "/login.jsp");
+				}
+			}
+			
 		} catch (DAOException e) {
 			e.printStackTrace();
 			request.setAttribute("message", "内部エラーが発生しました。");
