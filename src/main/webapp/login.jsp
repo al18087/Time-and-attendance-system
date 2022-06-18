@@ -34,7 +34,7 @@
 	</form>
 	<br>
 	<h6>
-		<a href="/work/register.jsp">新規登録</a>
+		<a href="/work/register.jsp" class="text-success">新規登録</a>
 	</h6>
 </body>
 </html>

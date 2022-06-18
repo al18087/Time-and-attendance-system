@@ -16,6 +16,8 @@
 		<h1 class="display-4">勤怠システム</h1>
 	</header>
 	<hr>
+	<h2>${login.name}さん、こんにちは！</h2>
+	<hr>
 	<a href="/work/LoginServlet?action=logout" class="text-success"
 		style="font-size: 20px;">ログアウト</a>
 	<hr>

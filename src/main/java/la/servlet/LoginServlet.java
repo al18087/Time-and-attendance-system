@@ -47,7 +47,16 @@ public class LoginServlet extends HttpServlet {
 			
 			// IDとパスワードを入力したとき
 			else if (action.equals("login")) {
-				int loginId = Integer.parseInt(request.getParameter("login_id"));
+				String strLoginId = request.getParameter("login_id");
+				
+				// 社員番号が入力されていない場合
+				if (strLoginId.length() == 0) {
+					request.setAttribute("message", "社員番号を入力してください。");
+					Forward.gotoPage(request, response, "/login.jsp");
+					return;
+				}
+				
+				int loginId = Integer.parseInt(strLoginId);
 				String password = request.getParameter("password");
 				LoginDAO dao = new LoginDAO();
 				LoginBean login = dao.findLogin(loginId, password);
