@@ -51,7 +51,7 @@
 			
 				<c:when test="${item.dayOfWeek eq 'SATURDAY'}">
 					<form
-						action="/Work/ScheduleServlet?action=schedule&year=${item.year}&month=${item.monthValue}&day=${item.dayOfMonth}"
+						action="/work/ScheduleServlet?action=schedule&year=${item.year}&month=${item.monthValue}&day=${item.dayOfMonth}"
 						method="post">
 					<tr class="table-info">
 						<th>${item.dayOfMonth}</th>
@@ -63,7 +63,7 @@
 				
 				<c:when test="${item.dayOfWeek eq 'SUNDAY'}">
 					<form
-						action="/Work/ScheduleServlet?action=schedule&year=${item.year}&month=${item.monthValue}&day=${item.dayOfMonth}"
+						action="/work/ScheduleServlet?action=schedule&year=${item.year}&month=${item.monthValue}&day=${item.dayOfMonth}"
 						method="post">
 						<tr class="table-danger">
 							<th>${item.dayOfMonth}</th>
@@ -75,7 +75,7 @@
 				
 				<c:otherwise>
 					<form
-						action="/Work/ScheduleServlet?action=schedule&year=${item.year}&month=${item.monthValue}&day=${item.dayOfMonth}"
+						action="/work/ScheduleServlet?action=schedule&year=${item.year}&month=${item.monthValue}&day=${item.dayOfMonth}"
 						method="post">
 						<tr>
 							<th>${item.dayOfMonth}</th>

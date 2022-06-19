@@ -6,10 +6,17 @@ import java.time.YearMonth;
 public class OriginalLocalDateBean {
 	private int year;
 	private int month;
+	private int day;
 	
 	public OriginalLocalDateBean(int year, int month) {
 		this.year = year;
 		this.month = month;
+	}
+	
+	public OriginalLocalDateBean(int year, int month, int day) {
+		this.year = year;
+		this.month = month;
+		this.day = day;
 	}
 	
 	public OriginalLocalDateBean() {};
@@ -45,6 +52,14 @@ public class OriginalLocalDateBean {
 	
 	public void setMonth(int month) {
 		this.month = month;
+	}
+	
+	public int getDay() {
+		return day;
+	}
+	
+	public void setDay(int day) {
+		this.day = day;
 	}
 	
 }
