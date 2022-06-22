@@ -21,6 +21,8 @@
 	<a href="/work/LoginServlet?action=logout" class="text-success"
 		style="font-size: 20px;">ログアウト</a>
 	<hr>
+	<h2 id="time"></h2>
+	<hr>
 	<form action="/work/WorkServlet?action=search_calendar" method="post">
 		閲覧したいカレンダーを選択　
 		<select name="year" style="font-size : 20px;">
@@ -87,5 +89,6 @@
 			</c:choose>
 		</c:forEach>
 	</table>
+	<script src="/work/time.js"></script>
 </body>
 </html>
